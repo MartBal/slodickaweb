@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Nunito:wght@300;400&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/css/style.css">
+
+    </head>
+    <body>
+
+	<header class="header">
+		<img class="header__logo" src="/images/kslogo.jpeg">Vitajte</img>
+	</header>
+
+	<nav class="menu">
+		<ul class="menu__list">
+			<li class="menu__item"><a href="/" class="menu__link">Úvod</a></li>
+			<li class="menu__item"><a href="/ilustracie/" class="menu__link">Ilustrácie</a></li>
+			<li class="menu__item"><a href="/fotky/" class="menu__link">Fotky</a></li>
+            <li class="menu__item"><a href="/obchod/" class="menu__link">Obchod</a></li>
+            <li class="menu__item"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
+		</ul>
+	</nav>
+
+	<main class="main">
+
+    {{ content | safe }}
+
+    </main>
+
+
+	<footer class="footer">
+		&copy; 2021      s láskou Martina Balážová
+	</footer>
+
+</body>
+</html>
