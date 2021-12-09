@@ -23,38 +23,31 @@ h1 {
 }
 
 .header {
-  background:;
-  margin-left: 170px;
-  margin-right: 170px;
-  padding: 30px 170px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+  margin: 20px 200px 10px 170px;
 }
 
 .header__logo {
-  max-width: 100px;
-  margin: 0 30px 15px 0;
+  max-width: 200px;
 }
 
 .menu {
-  background-color: #a39e9b;
-  margin-left: 170px;
-  margin-right: 170px;
+  background-color: white;
 }
 
 .menu__list {
-  margin-left: 170px;
-  margin-right: 170px;
   padding: 2px;
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
-
-
 .menu__link {
   display: block;
   padding: 15px 30px;
-  color: #e0e0e0;
+  color: #4b4646;
   text-decoration: none;
   font-weight: bold;
 }
@@ -75,8 +68,6 @@ h1 {
   width: 100%;
 }
 
-
-
 .image--right {
   max-width: 400px;
   float: right;
@@ -86,5 +77,6 @@ h1 {
 .footer {
   background-color: #e5e5e5;
   padding: 30px;
+  margin: 0 170px;
   text-align: center;
 }
