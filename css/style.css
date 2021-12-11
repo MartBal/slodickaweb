@@ -2,19 +2,26 @@ html {
   box-sizing: border-box;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 
-     /*  -----  RESPONZIVITA ----- */
-
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   max-width: 580px;
   padding: 10px;
-  font-weight: 400;
+  font-weight: 500;
+}
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 20px;
+    max-width: 1000px;
+    margin: 20px 140px;
+  }
 }
 
 .main {
@@ -24,44 +31,63 @@ body {
 }
 
 h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   text-align: center;
   font-size: 20px;
 }
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 300;
   text-align: left;
   margin-bottom: 10px;
   font-size: 18px;
 }
-
-     /*  -----  HEADER ----- */
-
-.menu__checkbox {
-  position: absolute;
-  left: -9999px;
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
 }
 
 .header {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 10px 10px;
-} 
-
+}
+@media screen and (min-width: 800px) {
+  .header {
+    justify-content: space-between;
+  }
+}
 .header__logo {
   max-width: 150px;
+}
+@media screen and (min-width: 800px) {
+  .header__logo {
+    max-width: 300px;
+  }
 }
 
 .menu__list {
   display: none;
-  background-color: rgb(238, 184, 46);
+  background-color: #eeb82e;
   padding: 1.5px;
   justify-content: center;
-  list-style: none; 
+  list-style: none;
+}
+@media screen and (min-width: 800px) {
+  .menu__list {
+    display: flex !important;
+    background-color: transparent;
+  }
 }
 
 .menu__checkbox:checked ~ .menu__list {
@@ -70,6 +96,11 @@ h2 {
 
 .menu__toggler {
   cursor: pointer;
+}
+@media screen and (min-width: 800px) {
+  .menu__toggler {
+    display: none;
+  }
 }
 
 .menu__link {
@@ -80,34 +111,64 @@ h2 {
   font-weight: bold;
   font-size: 16px;
 }
+@media screen and (min-width: 800px) {
+  .menu__link {
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+}
 
-.menu__link:hover, .menu__link:active, .menu__link:focus {
-  background-color: #FFDF00;
+.menu__link:hover,
+.menu__link:active,
+.menu__link:focus {
+  background-color: #ffdf00;
   color: #4b4646;
 }
 
-     /* -----  INDEX  ----- */
-
-.image--right {
-  max-width: 300px;
-  margin: 10px 10px;
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
 }
 
-     /*  -----  FOTKY ----- */ 
+.footer {
+  background-color: #e5e5e5;
+  padding: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    padding: 30px;
+    max-width: 1100px;
+  }
+}
 
 .photos__image {
   max-width: 280px;
   max-height: 250px;
 }
+@media screen and (min-width: 800px) {
+  .photos__image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
 
-     /*  -----  ILUSTRACIE ----- */
-
+@media screen and (min-width: 800px) {
+  .photos__grid {
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - 40px) / 4));
+    gap: 15px;
+  }
+}
 .illustration__image {
   max-width: 250px;
   max-height: 250px;
 }
-
-     /*  -----  PISMO ----- */
+@media screen and (min-width: 800px) {
+  .illustration__image {
+    max-height: 300px;
+  }
+}
 
 .writing__item {
   max-width: 275px;
@@ -115,8 +176,14 @@ h2 {
   padding: 10px 10px;
 }
 
-     /*  -----  KONTAKT ----- */ 
-
+@media screen and (min-width: 800px) {
+  .illustrations__grid,
+.writing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 60px) / 3));
+    gap: 20px;
+  }
+}
 .check {
   position: absolute;
   left: -9999px;
@@ -125,87 +192,27 @@ h2 {
 .box {
   border: none;
   padding: 20px;
-  background-color: rgb(248, 241, 225);
+  background-color: #f8f1e1;
 }
-
 .box label {
   display: block;
 }
-
 .box .text {
-  display: none;;
+  display: none;
 }
 
 .check:checked ~ .text {
   display: block;
 }
 
-     /*  -----  FOOTER ----- */
-
-.footer {
-  background-color: #e5e5e5;
-  padding: 10px;
-  text-align: center;
+/* -----  INDEX  ----- */
+.image--right {
+  max-width: 300px;
+  margin: 10px 10px;
 }
 
-
-
 @media screen and (min-width: 800px) {
-
-  body {
-    font-size: 20px;
-    max-width: 1000px;
-    margin: 20px 140px;
-  }
-
- /*  .main {
-    margin: 30px 0;
-    padding: 30px 170px;
-    max-width: none;
-  } */
-
-     /*  -----  HEADER ----- */
-
-  .menu__toggler {
-    display: none;
-  }
-
-  .menu__list {
-    display: flex !important;
-    background-color: transparent;
-  }
-
-  .menu__link {
-    display: block;
-    padding: 15px 20px;
-    color: #4b4646;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header__logo {
-    max-width: 300px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-  }
-
-
-     /* -----  INDEX  ----- */
-
+  /* -----  INDEX  ----- */
   .image--right {
     max-width: 400px;
     padding: 100px 0;
@@ -218,44 +225,4 @@ h2 {
   .section {
     flex: 0 0 50%;
   }
-
-     /*  -----  FOTKY ----- */  
-
-  .photos__grid {
-    display: grid;
-    grid-template-columns: repeat(4, calc((100% - 40px) / 4));
-    gap: 15px;
-  }
-
-  .photos__image {
-    max-width: 200px;
-    max-height: 200px;
-  }
-
-     /*  -----  ILUSTRACIE ----- */ 
-
-
-  .illustration__image {
-    max-width: 250px;
-    max-height: 300px;
-  }
-
-  .illustrations__grid, .writing__grid {
-    display: grid;
-    grid-template-columns: repeat(3, calc((100% - 60px) / 3));
-    gap: 20px;
-  }
-
-     /*  -----  KONTAKT ----- */ 
-
-
-
-     /*  -----  FOOTER ----- */
-
-  .footer {
-    padding: 30px;
-    max-width: 1100px;
-    text-align: center;
-  }
-
-}
+}/*# sourceMappingURL=style.css.map */

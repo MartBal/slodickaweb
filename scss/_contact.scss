@@ -1,0 +1,26 @@
+@use 'colors';
+@use 'fonts';
+
+.check {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .box {
+    border: none;
+    padding: 20px;
+    background-color: rgb(248, 241, 225);
+  
+    label {
+      display: block;
+    }
+  
+    .text {
+      display: none;
+    }
+  }
+  
+  .check:checked ~ .text {
+    display: block;
+  }
+  

@@ -1,0 +1,34 @@
+@use 'colors';
+@use 'basic';
+@use 'fonts';
+@use 'header';
+@use 'footer';
+@use 'photos';
+@use 'illustrations';
+@use 'contact';
+
+
+/* -----  INDEX  ----- */
+
+.image--right {
+  max-width: 300px;
+  margin: 10px 10px;
+}
+
+@media screen and (min-width: 800px) {
+  /* -----  INDEX  ----- */
+
+  .image--right {
+    max-width: 400px;
+    padding: 100px 0;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .section {
+    flex: 0 0 50%;
+  }
+
+}

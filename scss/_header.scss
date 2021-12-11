@@ -1,0 +1,72 @@
+@use 'colors';
+@use 'fonts';
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 10px;
+  
+    @media screen and (min-width: 800px) {
+      justify-content: space-between;
+    }
+  
+    &__logo {
+      max-width: 150px;
+  
+      @media screen and (min-width: 800px) {
+        max-width: 300px;
+      }
+    }
+  }
+  
+  .menu__list {
+    display: none;
+    background-color: colors.$c-menu-secondary;
+    padding: 1.5px;
+    justify-content: center;
+    list-style: none;
+  
+    @media screen and (min-width: 800px) {
+      display: flex !important;
+      background-color: transparent;
+    }
+  }
+  
+  .menu__checkbox:checked ~ .menu__list {
+    display: block;
+  }
+  
+  .menu__toggler {
+    cursor: pointer;
+  
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+  }
+  
+  .menu__link {
+    display: block;
+    padding: 10px 10px;
+    color: #4b4646;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  
+    @media screen and (min-width: 800px) {
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+  }
+  
+  .menu__link:hover,
+  .menu__link:active,
+  .menu__link:focus {
+    background-color: colors.$c-menu-primary;
+    color: #4b4646;
+  }
+  
+  .menu__checkbox {
+    position: absolute;
+    left: -9999px;
+  }

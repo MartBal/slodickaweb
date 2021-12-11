@@ -1,0 +1,26 @@
+@use 'colors';
+@use 'fonts';
+
+.illustration__image {
+    max-width: 250px;
+    max-height: 250px;
+  
+    @media screen and (min-width: 800px) {
+      max-height: 300px;
+    }
+  }
+
+  .writing__item {
+    max-width: 275px;
+    max-height: 300px;
+    padding: 10px 10px;
+  }
+
+@media screen and (min-width: 800px) {
+  .illustrations__grid,
+  .writing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 60px) / 3));
+    gap: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+@use 'colors';
+@use 'fonts';
+
+.photos__image {
+    max-width: 280px;
+    max-height: 250px;
+  
+    @media screen and (min-width: 800px) {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .photos__grid {
+        display: grid;
+        grid-template-columns: repeat(4, calc((100% - 40px) / 4));
+        gap: 15px;
+      }
+  }
