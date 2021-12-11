@@ -6,98 +6,104 @@ html {
   box-sizing: inherit;
 }
 
+/* ----------Responzivnost----------------------------------------- */
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
+  max-width: 580px;
+  padding: 10px;
+}
+
+.main {
+  padding: 10px 10px;
+  overflow: auto;
+  flex: 1;
 }
 
 h1 {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 h2 {
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-.text-center {
-  text-align: center;
-}
+ /* --------HEADER------------------ */
 
-.container {
-  display: flex;
-}
-
-.section {
-  flex: 0 0 50%;
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
 }
 
 .header {
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
 	align-items: center;
-  margin: 20px 180px 10px 140px;
-}
+  margin: 10px 10px; */
+} 
 
 .header__logo {
-  max-width: 300px;
-}
-
-.menu {
-  margin-top: 10px;
-  background-color: white;
+  max-width: 150px;
 }
 
 .menu__list {
+  display: none;
   padding: 2px;
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
+}
+
+.menu__toggler {
+  cursor: pointer;
+}
+
 .menu__link {
   display: block;
-  padding: 15px 20px;
+  padding: 10px 10px;
   color: #4b4646;
   text-decoration: none;
   font-weight: bold;
 }
 
-.menu__link:hover, .menu__link:focus {
+.menu__link:hover, .menu__link:active, .menu__link:focus {
   background-color: #FFDF00;
   color: #4b4646;
 }
 
-.main {
-  margin: 30px 0;
-  padding: 30px 170px;
-  overflow: auto;
-  flex: 1;
-}
+
+
+ /* --------INDEX------------------- */
+
+
+
 
 .image--right {
-  max-width: 400px;
-  margin: 100px 20px;
+  max-width: 300px;
+  margin: 10px 10px;
 }
 
 
  /*  --- Fotky ---
 --------------------- */ 
 
-.photos__grid {
-  display: grid;
-	grid-template-columns: repeat(4, 200px);
-	gap: 15px;
-}
 
 .photos__image {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 280px;
+  max-height: 250px;
 }
 
  /*  --- Ilustracie ------------------------ */ 
@@ -108,11 +114,6 @@ h2 {
   max-height: 300px;
 }
 
-.illustrations__grid, .writing__grid {
-	display: grid;
-	grid-template-columns: repeat(3, 300px);
-	gap: 20px;
-}
 
  /*  --- Pismo ------------------------ */ 
 
@@ -122,10 +123,117 @@ h2 {
   max-height: 300px;
 }
 
+ /*  --- Footer ------------ */ 
 
 .footer {
   background-color: #e5e5e5;
-  padding: 30px;
-  margin: 0 170px;
+  padding: 10px;
   text-align: center;
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+   /* ------HEADER----------------- */
+
+  .menu__toggler {
+    display: none;
+  }
+
+  .menu__list {
+    display: flex !important;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 180px 10px 140px;
+  }
+
+  .header__logo {
+    max-width: 300px;
+  }
+
+  body {
+    font-size: 20px;
+    max-width: none;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .menu__link {
+  display: block;
+  padding: 15px 20px;
+  color: #4b4646;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main {
+  margin: 30px 0;
+  padding: 30px 170px;
+  max-width: none;
+}
+
+
+
+  /* --------INDEX------------------- */
+
+  .image--right {
+    max-width: 400px;
+    margin: 100px 20px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .section {
+    flex: 0 0 50%;
+  }
+
+   /*  --- Fotky ------ */ 
+
+  .photos__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 15px;
+  }
+
+  .photos__image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+ /*  --- Ilustracie ------------------------ */ 
+
+
+  .illustration__image {
+    max-width: 250px;
+    max-height: 300px;
+  }
+
+  .illustrations__grid, .writing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+  }
+
+/*  --- Footer ------------ */ 
+
+  .footer {
+    padding: 30px;
+    margin: 0 170px;
+    text-align: center;
+  }
+
 }
