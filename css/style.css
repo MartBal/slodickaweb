@@ -10,10 +10,11 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   max-width: 580px;
   padding: 10px;
+  font-weight: 400;
 }
 
 .main {
@@ -207,7 +208,7 @@ h2 {
 
   .image--right {
     max-width: 400px;
-    margin: 100px 20px;
+    padding: 100px 0;
   }
 
   .container {
