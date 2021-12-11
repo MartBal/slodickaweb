@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-/* ----------Responzivnost----------------------------------------- */
+     /*  -----  RESPONZIVITA ----- */
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -37,7 +37,7 @@ h2 {
   margin-bottom: 10px;
 }
 
- /* --------HEADER------------------ */
+     /*  -----  HEADER ----- */
 
 .menu__checkbox {
   position: absolute;
@@ -84,46 +84,60 @@ h2 {
   color: #4b4646;
 }
 
-
-
- /* --------INDEX------------------- */
-
-
-
+     /* -----  INDEX  ----- */
 
 .image--right {
   max-width: 300px;
   margin: 10px 10px;
 }
 
-
- /*  --- Fotky ---
---------------------- */ 
-
+     /*  -----  FOTKY ----- */ 
 
 .photos__image {
   max-width: 280px;
   max-height: 250px;
 }
 
- /*  --- Ilustracie ------------------------ */ 
-
+     /*  -----  ILUSTRACIE ----- */
 
 .illustration__image {
   max-width: 250px;
-  max-height: 300px;
+  max-height: 250px;
 }
 
-
- /*  --- Pismo ------------------------ */ 
-
+     /*  -----  PISMO ----- */
 
 .writing__item {
   max-width: 275px;
   max-height: 300px;
 }
 
- /*  --- Footer ------------ */ 
+     /*  -----  KONTAKT ----- */ 
+
+.check {
+  position: absolute;
+  left: -9999px;
+}
+
+.box {
+  border: none;
+  padding: 20px;
+  background-color: rgb(248, 241, 225);
+}
+
+.box label {
+  display: block;
+}
+
+.box .text {
+  display: none;;
+}
+
+.check:checked ~ .text {
+  display: block;
+}
+
+     /*  -----  FOOTER ----- */
 
 .footer {
   background-color: #e5e5e5;
@@ -135,7 +149,7 @@ h2 {
 
 @media screen and (min-width: 800px) {
 
-   /* ------HEADER----------------- */
+     /*  -----  HEADER ----- */
 
   .menu__toggler {
     display: none;
@@ -186,7 +200,7 @@ h2 {
 
 
 
-  /* --------INDEX------------------- */
+     /* -----  INDEX  ----- */
 
   .image--right {
     max-width: 400px;
@@ -201,7 +215,7 @@ h2 {
     flex: 0 0 50%;
   }
 
-   /*  --- Fotky ------ */ 
+     /*  -----  FOTKY ----- */  
 
   .photos__grid {
     display: grid;
@@ -214,7 +228,7 @@ h2 {
     max-height: 200px;
   }
 
- /*  --- Ilustracie ------------------------ */ 
+     /*  -----  ILUSTRACIE ----- */ 
 
 
   .illustration__image {
@@ -228,7 +242,32 @@ h2 {
     gap: 20px;
   }
 
-/*  --- Footer ------------ */ 
+     /*  -----  KONTAKT ----- */ 
+
+  /* .check {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .box {
+    border: none;
+    padding: 20px;
+    background-color: rgb(248, 241, 225);
+  }
+
+  .box label {
+    display: block;
+  }
+
+  .box .text {
+    display: none;;
+  }
+
+  .check:checked ~ .text {
+    display: block;
+  } */
+
+     /*  -----  FOOTER ----- */
 
   .footer {
     padding: 30px;
