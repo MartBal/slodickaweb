@@ -27,7 +27,6 @@ h1 {
   font-weight: 400;
   text-align: center;
   font-size: 20px;
-  font-weight: bold;
 }
 
 h2 {
@@ -35,6 +34,7 @@ h2 {
   font-weight: 300;
   text-align: left;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
      /*  -----  HEADER ----- */
@@ -45,10 +45,10 @@ h2 {
 }
 
 .header {
-	/* display: flex;
-	justify-content: space-between;
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
-  margin: 10px 10px; */
+  margin: 10px 10px;
 } 
 
 .header__logo {
@@ -57,10 +57,10 @@ h2 {
 
 .menu__list {
   display: none;
-  padding: 2px;
-  display: flex;
+  background-color: rgb(238, 184, 46);
+  padding: 1.5px;
   justify-content: center;
-  list-style: none;
+  list-style: none; 
 }
 
 .menu__checkbox:checked ~ .menu__list {
@@ -77,6 +77,7 @@ h2 {
   color: #4b4646;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .menu__link:hover, .menu__link:active, .menu__link:focus {
@@ -110,6 +111,7 @@ h2 {
 .writing__item {
   max-width: 275px;
   max-height: 300px;
+  padding: 10px 10px;
 }
 
      /*  -----  KONTAKT ----- */ 
