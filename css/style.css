@@ -151,6 +151,18 @@ h2 {
 
 @media screen and (min-width: 800px) {
 
+  body {
+    font-size: 20px;
+    max-width: 1000px;
+    margin: 20px 140px;
+  }
+
+ /*  .main {
+    margin: 30px 0;
+    padding: 30px 170px;
+    max-width: none;
+  } */
+
      /*  -----  HEADER ----- */
 
   .menu__toggler {
@@ -159,22 +171,26 @@ h2 {
 
   .menu__list {
     display: flex !important;
+    background-color: transparent;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 15px 20px;
+    color: #4b4646;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 180px 10px 140px;
   }
 
   .header__logo {
     max-width: 300px;
-  }
-
-  body {
-    font-size: 20px;
-    max-width: none;
   }
 
   h1 {
@@ -185,21 +201,6 @@ h2 {
     font-size: 1.5em;
     margin-bottom: 30px;
   }
-
-  .menu__link {
-  display: block;
-  padding: 15px 20px;
-  color: #4b4646;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.main {
-  margin: 30px 0;
-  padding: 30px 170px;
-  max-width: none;
-}
-
 
 
      /* -----  INDEX  ----- */
@@ -221,7 +222,7 @@ h2 {
 
   .photos__grid {
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, calc((100% - 40px) / 4));
     gap: 15px;
   }
 
@@ -240,40 +241,19 @@ h2 {
 
   .illustrations__grid, .writing__grid {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, calc((100% - 60px) / 3));
     gap: 20px;
   }
 
      /*  -----  KONTAKT ----- */ 
 
-  /* .check {
-    position: absolute;
-    left: -9999px;
-  }
 
-  .box {
-    border: none;
-    padding: 20px;
-    background-color: rgb(248, 241, 225);
-  }
-
-  .box label {
-    display: block;
-  }
-
-  .box .text {
-    display: none;;
-  }
-
-  .check:checked ~ .text {
-    display: block;
-  } */
 
      /*  -----  FOOTER ----- */
 
   .footer {
     padding: 30px;
-    margin: 0 170px;
+    max-width: 1100px;
     text-align: center;
   }
 
