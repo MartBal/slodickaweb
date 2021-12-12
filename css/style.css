@@ -26,8 +26,8 @@ body {
 
 .main {
   padding: 10px 10px;
-  overflow: auto;
-  flex: 1;
+  /*  overflow: auto;
+   flex: 1; */
 }
 
 h1 {
@@ -211,6 +211,32 @@ h2 {
   margin: 10px 10px;
 }
 
+.photo {
+  display: inline-block;
+  padding: 20px;
+  background-color: #e5e5e5;
+}
+
+.photo__image {
+  max-width: 280px;
+  max-height: 250px;
+}
+@media screen and (min-width: 800px) {
+  .photo__image {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+  }
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery > * {
+  flex: 0 0 calc(100% / 6);
+}
+
 @media screen and (min-width: 800px) {
   /* -----  INDEX  ----- */
   .image--right {
@@ -225,4 +251,6 @@ h2 {
   .section {
     flex: 0 0 50%;
   }
+
+  /* -----  OBCHOD  ----- */
 }/*# sourceMappingURL=style.css.map */

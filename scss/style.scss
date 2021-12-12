@@ -15,6 +15,31 @@
   margin: 10px 10px;
 }
 
+.photo {
+  display: inline-block;
+  padding: 20px;
+  background-color: colors.$c-footer;
+}
+
+.photo__image {
+  max-width: 280px;
+  max-height: 250px;
+
+  @media screen and (min-width: 800px) {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+  }
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery  > * {
+  flex: 0 0 calc(100% / 3);
+}
+
 @media screen and (min-width: 800px) {
   /* -----  INDEX  ----- */
 
