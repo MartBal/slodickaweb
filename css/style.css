@@ -26,8 +26,7 @@ body {
 
 .main {
   padding: 10px 10px;
-  /*  overflow: auto;
-   flex: 1; */
+  overflow: auto;
 }
 
 h1 {
@@ -212,31 +211,40 @@ h2 {
 }
 
 .photo {
-  display: inline-block;
-  padding: 20px;
+  display: block;
+  padding: 10px;
   background-color: #e5e5e5;
+}
+@media screen and (min-width: 800px) {
+  .photo {
+    padding: 10px;
+  }
 }
 
 .photo__image {
-  max-width: 280px;
-  max-height: 250px;
+  max-width: 150px;
+  max-height: 150px;
+  display: block;
+  padding: 10px;
 }
 @media screen and (min-width: 800px) {
   .photo__image {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 240px;
+    max-height: 240px;
     display: block;
   }
 }
 
-.gallery {
-  display: flex;
-}
+@media screen and (min-width: 800px) {
+  .gallery {
+    display: flex;
+    justify-content: center;
+  }
 
-.gallery > * {
-  flex: 0 0 calc(100% / 6);
+  .photo {
+    flex: 0 0 250px;
+  }
 }
-
 @media screen and (min-width: 800px) {
   /* -----  INDEX  ----- */
   .image--right {
@@ -251,6 +259,4 @@ h2 {
   .section {
     flex: 0 0 50%;
   }
-
-  /* -----  OBCHOD  ----- */
 }/*# sourceMappingURL=style.css.map */
